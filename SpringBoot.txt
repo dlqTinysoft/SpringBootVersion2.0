@@ -1,0 +1,51 @@
+
+============================SpringBoot学习笔记=================================================
+
+1.Springboot是在SpringMvc之上Spring组件,使用SpringBoot使用的基础包
+<!-- Inherit defaults from Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.8.RELEASE</version>
+    </parent>
+
+    <!-- Add typical dependencies for a web application -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+2.Springboot是java的应用程序，是靠main函数启动的，内置tomcat器。
+
+
+3.@SpringBootApplication注解方式启动，可以进一步简化SpringBoot启动
+    @SpringBootApplication只会扫描当前包下和子包下。需要加上参数scanBasePackages = "com.ccnu.controller"
+
+
+4.SpringBoot访问静态资源
+    在resources设置static下，静态资源可以放在该文件夹进行访问。
+    https://blog.csdn.net/qq_34797335/article/details/80194137
+
+5.SpringBoot基础Freemarker
+    1）首先引入依赖包
+         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+         </dependency>
+    2）然后在resouces文件下建立templates目录，将所编写的文件都放入到该目录。
+    demo:见FreemarkerController
+
+6.SpringBoot集成JSP
+    https://www.cnblogs.com/mercurys/p/7685102.html
+    1）首先在pom文件上面一行加入 <packaging>war</packaging>，因为jsp依赖web环境。
+    2）FreeMarker和jsp跳转到相同的文件，及index.jsp和index.ftl，则会访问index.ftl。
+    3）jsp文件需要放在webapp/WEB-INF/下面。
+7.SpringBoot整合全局捕获异常
+    1）单独定义一个捕获异常类，加上@ControllerAdvice注解，就可以拦截Controller发生的异常了
+
+    2）在方法上加上@ExceptionHandler(value=Exception.class),就可以拦截异常了
+
+    注意：如果返回json串，必须在方法上加@ResponseBody。  SpringBoot中，其他的类，不加@ResponseBody也可以返回json串。
+
