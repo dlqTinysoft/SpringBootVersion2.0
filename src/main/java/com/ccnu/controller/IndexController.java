@@ -31,7 +31,7 @@ public class IndexController {
      */
     @RequestMapping("/getOrder")
     public Map<String, Object> getOrder(){
-        Map<String,Object> map = new HashMap<String,Object>();
+        Map<String,Object> map = new HashMap<>();
         map.put("orderId", UUID.randomUUID().toString());
         map.put("orderName","爱奇艺支付");
         return map;

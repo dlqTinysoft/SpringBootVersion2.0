@@ -19,7 +19,7 @@ public class ExceptionController {
     @ResponseBody
     @ExceptionHandler(value = Exception.class)
     public Map<String,Object> exceptionHandler(Exception ex){
-        Map<String,Object> map = new HashMap<String,Object>();
+        Map<String,Object> map = new HashMap<>();
         map.put("errorCode",405);
         map.put("errorMessage",ex.getMessage());
         return map;

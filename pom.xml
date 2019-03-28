@@ -41,6 +41,32 @@
         </dependency>
         <!--end-->
 
+
+        <!--start-->
+        <!-- Spring Boot 整合log4j所需要的依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j</artifactId>
+        </dependency>
+        <!--end-->
+
+        <!--start-->
+        <!--springboot集成Aop所需要的包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+         <!--end-->
+        <!--start-->
+        <!-- 集成lombok 所需要的依赖包 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--end-->
+
     </dependencies>
 
 

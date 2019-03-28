@@ -49,3 +49,37 @@
 
     注意：如果返回json串，必须在方法上加@ResponseBody。  SpringBoot中，其他的类，不加@ResponseBody也可以返回json串。
 
+8.SpringBoot整合log4j，只需在resources目录下，新建log4j.properties就可以了。
+
+9.SpringBoot做切面，做一个统一web日志处理
+    http://blog.didispace.com/springbootaoplog/?spm=a2c4e.11153940.blogcont576452.14.3ec0161dPejBIG
+
+10.lombok插件的使用
+    首先在pom文件中引入包，然后在idea里面安装插件，特别方便
+    https://www.cnblogs.com/zhangyinhua/p/8623018.html
+11.异步方法调用：@Aysnc
+    @Aysnc异步调用，以及自定义线程池
+    https://blog.csdn.net/J080624/article/details/80958081
+    启动的时候，需要加入 @EnableAsync 注解
+
+12.SpringBoot多环境配置文件
+    spring.profiles.active=prd
+   https://blog.csdn.net/qq_35814269/article/details/78531316
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

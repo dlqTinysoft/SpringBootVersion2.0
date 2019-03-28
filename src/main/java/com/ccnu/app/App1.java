@@ -2,13 +2,14 @@ package com.ccnu.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * created by 董乐强 on 2019/3/27
  * 简化springboot启动，只需要一个@SpringBootApplication注解，即可启动SpringBoot
  */
-
-@SpringBootApplication(scanBasePackages = "com.ccnu.controller")
+@EnableAsync
+@SpringBootApplication(scanBasePackages = "com.ccnu.*")
 public class App1 {
 
     /**
