@@ -67,6 +67,17 @@
    https://blog.csdn.net/qq_35814269/article/details/78531316
 
 
+13.SpringBoot集成JDBC模板。
+
+14.SpringBoot集成MyBatis
+    flag：使用xml自动生成方式，怎么做？
+
+15.SpringBoot集成MyBatis分页插件
+
+16.SpringBoot集成jpa,这里没有具体去实现。
+
+17.SpringBoot多数据源
+    开发中，常常一个项目需要操作多个数据库，每操作一个数据库都需要一个数据源。
 
 
 
